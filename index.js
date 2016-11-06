@@ -76,4 +76,4 @@ const getAndCheckFollowers = () => {
   });
 };
 
-new CronJob('* * * * * *', getAndCheckFollowers(), null, true);
+new CronJob('00 00 * * * *', getAndCheckFollowers(), null, true);

@@ -14,5 +14,8 @@
     "moment": "^2.15.2",
     "mongodb": "^2.2.11",
     "twit": "^2.2.5"
+  },
+  "scripts": {
+    "start": "node index",
   }
 }

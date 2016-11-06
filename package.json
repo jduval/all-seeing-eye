@@ -16,6 +16,6 @@
     "twit": "^2.2.5"
   },
   "scripts": {
-    "start": "node index",
+    "start": "node index"
   }
 }

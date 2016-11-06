@@ -34,6 +34,22 @@ const getAndCheckFollowers = () => {
             return db.close();
           }
 
+          if (!yesterdayFollowers.length) {
+            const document = {
+              date: moment().format('YYYY-MM-DD'),
+              followers: followers.ids,
+              new: [],
+              unfollow: [],
+            };
+            return collection.insertOne(document, (err) => {
+              if (err) {
+                console.error(err);
+                return db.close();
+              }
+              return db.close();
+            });
+          }
+
           const newFollowers = followers.ids.filter((followers) =>
             yesterdayFollowers[0].followers.filter((yesterdayFollowers) =>
               followers === yesterdayFollowers).length === 0);
@@ -60,4 +76,4 @@ const getAndCheckFollowers = () => {
   });
 };
 
-new CronJob('1 0 0 * * *', getAndCheckFollowers(), null, true);
+new CronJob('* * * * * *', getAndCheckFollowers(), null, true);

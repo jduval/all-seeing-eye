@@ -1,6 +1,5 @@
 'use strict';
 
-const CronJob = require('cron').CronJob;
 const Twit = require('twit');
 const moment = require('moment');
 const MongoClient = require('mongodb').MongoClient;
@@ -75,5 +74,4 @@ const getAndCheckFollowers = () => {
     });
   });
 };
-
-new CronJob('00 00 * * * *', getAndCheckFollowers(), null, true);
+getAndCheckFollowers();

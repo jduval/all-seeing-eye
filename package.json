@@ -9,8 +9,6 @@
   "author": "Jérôme Duval <jero.duval@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.1.2",
-    "cron": "^1.1.1",
     "moment": "^2.15.2",
     "mongodb": "^2.2.11",
     "twit": "^2.2.5"

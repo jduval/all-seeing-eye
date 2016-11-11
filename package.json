@@ -9,8 +9,10 @@
   "author": "Jérôme Duval <jero.duval@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "async": "^2.1.2",
     "moment": "^2.15.2",
     "mongodb": "^2.2.11",
+    "node-telegram-bot-api": "^0.24.0",
     "twit": "^2.2.5"
   },
   "scripts": {
